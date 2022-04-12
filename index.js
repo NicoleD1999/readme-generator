@@ -4,6 +4,8 @@ const fs = require('fs');
 const readMe = ({title, description, instructions, usage, contribution, test_instructions, license, github, email}) =>
 `<h1> ${title} </h1>
 
+![](https://img.shields.io/badge/License-${license}-blueviolet)
+
 <h2> Description </h2>
 <p> ${description} </p>
 
@@ -31,7 +33,7 @@ const readMe = ({title, description, instructions, usage, contribution, test_ins
 
 
 <h2 id="license"> License </h2>
-<p>${license}</p>
+<p> Please note this application is covered under license ${license}</p>
 
 <h2 id="contributing"> Contributing</h2>
 <p>${contribution}</p>
