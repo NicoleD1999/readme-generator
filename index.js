@@ -1,40 +1,48 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const readMe = ({title, description, instructions, usage, contribution, test_instructions, license, license_color, github, email}) =>
-`<h1> ${title}
+const readMe = ({title, description, instructions, usage, contribution, test_instructions, license, github, email}) =>
+`<h1> ${title} </h1>
 
-<h1> Description
-<p> ${description}
+<h2> Description </h2>
+<p> ${description} </p>
 
-<h2> Table of Contents 
-<li> Installation
-<li> Usage
-<li> License
-<li> Contributing
-<li> Tests
-<li> Questions
+<h2> Table of Contents </h2>
+<li> 
+<a href="#installation">Installation</a>
 
-<h2> Installation
-<p>${instructions}
+<li> 
+<a href="#usage">Usage</a>
+<li> 
+<a href="#license">License</a>
+<li> 
+<a href="#contributing">Contributing</a>
+<li> 
+<a href="#tests">Tests</a>
+<li> 
+<a href="#questions">Questions</a>
+
+<h2 id="installation"> Installation </h2>
+<p>${instructions} </p>
 
 
-<h2> Usage
-<p>${usage}
+<h2 id="usage"> Usage</h2>
+<p>${usage}</p>
 
 
-<h2> License 
-<p>${license}
+<h2 id="license"> License </h2>
+<p>${license}</p>
 
-<h2> Contributing
-<p>${contribution}
+<h2 id="contributing"> Contributing</h2>
+<p>${contribution}</p>
 
-<h2> Tests
-<p>${test_instructions}
+<h2 id="tests"> Tests</h2>
+<p>${test_instructions}</p>
 
-<h2> Questions
-<p>${github}
-<p>${email}`
+<h2 id="questions"> Questions</h2>
+<a href="https://github.com/${github}">${github}</a>
+
+<a href="mailto: ${email}">${email}</a>`
 
 
 inquirer
@@ -75,12 +83,6 @@ inquirer
       message: 'What license would you like your application to be covered under?',
       choices: ['MIT', 'GPL', 'Apache', 'BSD', 'compliant']
     },
-    {
-        type: 'list',
-        name: 'license_color',
-        message: 'What color would you like your license to be?',
-        choices: ['yellowgreen', 'brightgree', 'blueviolet', 'red', 'blue', 'orange']
-      },
     {
         type: 'input',
         name: 'github',
