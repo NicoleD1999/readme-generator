@@ -2,49 +2,48 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 const readMe = ({title, description, instructions, usage, contribution, test_instructions, license, github, email}) =>
-`<h1> ${title} </h1>
+`# ${title}
 
 ![](https://img.shields.io/badge/License-${license}-blueviolet)
 
-<h2> Description </h2>
-<p> ${description} </p>
+## Description
+ ${description} 
 
-<h2> Table of Contents </h2>
-<li> 
+## Table of Contents
+- 
 <a href="#installation">Installation</a>
-
-<li> 
+-
 <a href="#usage">Usage</a>
-<li> 
+-
 <a href="#license">License</a>
-<li> 
+- 
 <a href="#contributing">Contributing</a>
-<li> 
+- 
 <a href="#tests">Tests</a>
-<li> 
+- 
 <a href="#questions">Questions</a>
 
-<h2 id="installation"> Installation </h2>
-<p>${instructions} </p>
+## Installation
+${instructions}
 
 
-<h2 id="usage"> Usage</h2>
-<p>${usage}</p>
+## Usage
+${usage}
 
 
-<h2 id="license"> License </h2>
-<p> Please note this application is covered under license ${license}</p>
+## License
+Please note this application is covered under license ${license}
 
-<h2 id="contributing"> Contributing</h2>
-<p>${contribution}</p>
+## Contributing
+${contribution}
 
-<h2 id="tests"> Tests</h2>
-<p>${test_instructions}</p>
+## Tests
+${test_instructions}
 
-<h2 id="questions"> Questions</h2>
-<a href="https://github.com/${github}">${github}</a>
+## Questions
+[${github}]("https://github.com/${github}")
 
-<a href="mailto: ${email}">${email}</a>`
+[${email}]("mailto: ${email}")`
 
 
 inquirer
