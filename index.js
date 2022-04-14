@@ -10,18 +10,18 @@ const readMe = ({title, description, instructions, usage, contribution, test_ins
  ${description} 
 
 ## Table of Contents
-- 
-<a href="#installation">Installation</a>
--
-<a href="#usage">Usage</a>
--
-<a href="#license">License</a>
-- 
-<a href="#contributing">Contributing</a>
-- 
-<a href="#tests">Tests</a>
-- 
-<a href="#questions">Questions</a>
+
+[Installation](#installation)
+
+[Usage](#usage)
+
+[License](#license)
+
+[Contributing](#contributing)
+
+[Tests](#tests)
+
+[Questions](#questions)
 
 ## Installation
 ${instructions}
@@ -43,7 +43,7 @@ ${test_instructions}
 ## Questions
 [${github}]("https://github.com/${github}")
 
-[${email}]("mailto: ${email}")`
+<${email}>`
 
 
 inquirer
